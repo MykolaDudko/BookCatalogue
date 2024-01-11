@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookCatalogue", "BookCatalo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library", "Library\Library.csproj", "{77F6A95D-CB4C-4C0C-BB55-25D649E0F374}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookCatalogueTest", "BookCatalogueTest\BookCatalogueTest.csproj", "{7D7D75B3-9302-4DD1-A862-6091115766A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookCatalogueTest", "BookCatalogueTest\BookCatalogueTest.csproj", "{7D7D75B3-9302-4DD1-A862-6091115766A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
