@@ -19,8 +19,8 @@ public class UpdateBookCommandHandler : IRequestHandler<UpdateBookCommand>
     {
         var query = _repository.GetEntityLinqQueryable();
         query = query.Where(i => i.Id == request.Id);
-        var carrier = await _repository.GetAsync(query, ct);
-        _mapper.Map(request.Book, carrier);
-        await _repository.UpdateAsync(carrier, ct);
+        var book = await _repository.GetAsync(query, ct);
+        _mapper.Map(request.Book, book);
+        await _repository.UpdateAsync(book, ct);
     }
 }

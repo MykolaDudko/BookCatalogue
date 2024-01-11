@@ -19,7 +19,7 @@ public class GetAllBooksQueryHandler : IRequestHandler<GetAllBooksQuery, Respons
 
     public async Task<Response<BookDTO>> Handle(GetAllBooksQuery request, CancellationToken ct)
     {
-        var carrierResponse = await _repository.GetAllAsync();
-        return new Response<BookDTO>(carrierResponse.Count, _mapper.Map<List<BookDTO>>(carrierResponse));
+        var response = await _repository.GetAllAsync();
+        return new Response<BookDTO>(response.Count, _mapper.Map<List<BookDTO>>(response));
     }
 }

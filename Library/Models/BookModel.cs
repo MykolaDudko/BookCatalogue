@@ -9,5 +9,5 @@ public class BookModel : Entity
 {
     public string Title { get; set; }
     public string Author { get; set; }
-    public DateOnly Publication {  get; set; }  
+    public DateTime Publication {  get; set; }  
 }

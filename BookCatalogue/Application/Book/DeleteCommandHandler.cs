@@ -7,12 +7,10 @@ namespace BookCatalogue.Application.Book;
 public class DeleteCommandHandler : IRequestHandler<DeleteBookCommand>
 {
     private readonly BookRepository _repository;
-    private readonly IMapper _mapper;
 
-    public DeleteCommandHandler(IMapper mapper, BookRepository repository)
+    public DeleteCommandHandler( BookRepository repository)
     {
         _repository = repository;
-        _mapper = mapper;
     }
 
     public async Task Handle(DeleteBookCommand request, CancellationToken ct)
