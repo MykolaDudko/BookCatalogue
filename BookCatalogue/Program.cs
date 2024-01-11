@@ -4,6 +4,7 @@ using Library.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System.Reflection;
+using Library.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionStringName = "DefaultConnection";
@@ -34,5 +35,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseExceptionMiddleware();
 
 app.Run();
